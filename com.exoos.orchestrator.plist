@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.exoos.orchestrator</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- On utilise le chemin local absolu vers Node.js -->
+        <string>/usr/local/bin/node</string>
+        
+        <!-- Chemin vers notre orchestrateur -->
+        <string>/Users/asus/Exo OS/mcp-client-orchestrator/orchestrator.js</string>
+    </array>
+
+    <!-- Le dossier d'execution pour que le .env soit bien charge -->
+    <key>WorkingDirectory</key>
+    <string>/Users/asus/Exo OS/mcp-client-orchestrator</string>
+
+    <!-- Execution tous les jours a 21h00 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>21</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- On redirige de maniere silencieuse ou vers les logs d'erreurs -->
+    <key>StandardOutPath</key>
+    <string>/Users/asus/Exo OS/logs/orchestrator.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/asus/Exo OS/logs/orchestrator_error.log</string>
+</dict>
+</plist>

@@ -1,0 +1,14 @@
+{
+  "name": "mcp-imessage-poc",
+  "version": "1.0.0",
+  "description": "MCP server for iMessage database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "sqlite3": "^5.1.7"
+  }
+}

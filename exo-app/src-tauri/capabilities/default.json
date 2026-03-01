@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicegui-org/nicegui/main/tauri_config_v2_schema.json",
+  "identifier": "default",
+  "description": "Default capabilities for Exo OS",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "shell:allow-execute",
+    "shell:allow-open",
+    "fs:allow-read-text-file",
+    "fs:allow-exists",
+    "notification:default"
+  ]
+}

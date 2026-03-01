@@ -1,0 +1,23 @@
+node_modules/
+.env
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+History_copy.sqlite
+ChatStorage_copy.sqlite
+.DS_Store
+config.json
+last_sync.json
+logs/
+
+# Rust / Tauri
+target/
+dist/
+.next/
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/

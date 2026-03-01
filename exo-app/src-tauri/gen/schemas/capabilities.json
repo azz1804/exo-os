@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Default capabilities for Exo OS","local":true,"windows":["main"],"permissions":["core:default","shell:allow-execute","shell:allow-open","fs:allow-read-text-file","fs:allow-exists","notification:default"]}}

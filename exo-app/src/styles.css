@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* === EXO OS — Space Constellation Theme === */
+@theme {
+  /* Deep space */
+  --color-void: #030014;
+  --color-space-900: #070B1A;
+  --color-space-800: #0C1228;
+  --color-space-700: #121D3E;
+  --color-space-600: #1A2A54;
+
+  /* Nebula accent */
+  --color-nebula-500: #7B2FBE;
+  --color-nebula-400: #9B4FDE;
+  --color-nebula-300: #BB7FEE;
+  --color-nebula-glow: rgba(123, 47, 190, 0.3);
+
+  /* Electric blue */
+  --color-electric-500: #00A3FF;
+  --color-electric-400: #33B5FF;
+  --color-electric-300: #66C8FF;
+  --color-electric-glow: rgba(0, 163, 255, 0.3);
+
+  /* Planet colors */
+  --color-planet-timeline: #00A3FF;
+  --color-planet-contacts: #00E599;
+  --color-planet-journal: #FFB800;
+  --color-planet-settings: #8B9DC3;
+
+  /* Source colors */
+  --color-whatsapp: #25D366;
+  --color-imessage: #5AC8FA;
+  --color-fathom: #8B5CF6;
+  --color-comet: #F59E0B;
+
+  /* Text */
+  --color-star-white: #E8EAED;
+  --color-dust: #8892B0;
+  --color-dust-dark: #5A6380;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", monospace;
+}
+
+/* === Base === */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-void);
+  color: var(--color-star-white);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-space-600); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-space-700); }
+
+/* === Glass panel (no backdrop-filter for perf) === */
+.glass {
+  background: rgba(8, 12, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-hover:hover {
+  background: rgba(12, 18, 40, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === Glow effects === */
+.glow-blue {
+  box-shadow: 0 0 20px var(--color-electric-glow),
+              0 0 60px rgba(0, 163, 255, 0.1),
+              inset 0 0 20px rgba(0, 163, 255, 0.05);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px var(--color-nebula-glow),
+              0 0 60px rgba(123, 47, 190, 0.1);
+}
+
+/* === Drag region === */
+[data-tauri-drag-region] {
+  -webkit-app-region: drag;
+}
+
+/* === Selection === */
+::selection {
+  background: var(--color-electric-500);
+  color: white;
+}
